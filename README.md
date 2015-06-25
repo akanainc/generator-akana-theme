@@ -17,7 +17,7 @@ You'll be prompted for a company name (ex. `Custom Starter`) and a directory nam
 
 # Development
 
-See [Authoring Yeoman Generators](http://yeoman.io/authoring/index.html) as well as the [generator-generator](https://github.com/yeoman/generator-generator)
+See [Authoring Yeoman Generators](http://yeoman.io/authoring/index.html) as well as the [generator-generator](https://github.com/yeoman/generator-generator) for more info.
 
 
 # Usage
