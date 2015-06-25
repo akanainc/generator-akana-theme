@@ -1,0 +1,27 @@
+{
+  "name": "generator-akana-community-manager-default-theme",
+  "version": "0.1.0",
+  "description": "Default Theme customization for Akana Community Manager developer portal",
+  "files": [
+    "app",
+    "content",
+    "resources",
+    "custom.less"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "akana",
+    "communitymanager"
+  ],
+  "author": {
+    "name": "G. Hussain Chinoy",
+    "email": "hussain.chinoy@akana.com",
+    "url": "http://www.akana.com"
+  },
+  "dependencies": {
+    "yeoman-generator": "^0.19.2",
+    "yosay": "^1.0.0"
+  },
+  "repository": "apihussain/generator-akana-community-manager-default-theme",
+  "license": "MIT"
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cmApp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<script type="text/javascript" src="js/angular.min.js"></script>
+
+<link href="http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic" rel="stylesheet" type="text/css">
+<!--
+<link rel="stylesheet" type="text/css" href="/resources/style/reset.css" id="resetStyle">
+<link rel="stylesheet" type="text/css" href="/resources/style/global-all.css" id="globalStyle">
+<link rel="stylesheet" type="text/css" href="/resources/style/style.css" id="tenantStyle">
+<link rel="stylesheet" type="text/css" href="/resources/style/supplement.css" id="tenantStyle">
+<link rel="stylesheet" type="text/css" href="css/landing.css" id="tenantStyle">
+-->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+
+<link rel="stylesheet" type="text/css" href="css/cmStyle.css" id="cmStyle">
+<link rel="stylesheet" type="text/css" href="css/custom_starter.css" id="customStarterStyle">
+
+<script language="javascript" src="/resources/thirdparty/jquery/jquery-1.8.0.min.js"  type="text/javascript"></script>
+
+</head>
+<body style="margin:0px;" ng-controller="MainPageController">
+
+	<div id="content">
+		<div class="container clearfix" style="padding-top: 20px;">
+			<h1>API Catalog</h1>
+		</div>
+	</div>
+
+
+	<div class="jumbotron" style="background-image: url('images/starter_industries.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+		<div class="container" style="height: 250px;">
+
+			<div class="cm_hero">
+				<h1 style="width:505px;">Extend your Reach
+				<p>APIs you can trust</p></h1>
+
+				<div class="button"><a>Learn More</a></div>
+			</div>
+		
+		</div>
+		
+	</div>
+
+	<div class="container-fluid">
+		<div class="row cm_row">
+			<div class="col-sm-3 feature">
+				<div class="title" >Developer Guidance</div>
+				
+				<p>Welcome to the Starter API Catalog, your convenient source for developer guides, sample code, certification, production keys, and other information you will need to integrate Starter APIs into a website or application you’re developing. </p>
+				<p class="more">
+					<span class="glyphicon glyphicon-play"></span> Read more on this
+				<p>
+			</div>
+			<div class="col-sm-3 feature">
+				<div class="title">Developer APIs</div>
+
+				<p>
+				View our {{apis.channel.item.length}} APIs.
+				</p>
+				<p class="more">
+					<span class="glyphicon glyphicon-play"></span> Read more on this
+				<p>
+			</div>
+			<div class="col-sm-3 feature">
+				<div class="title">Partner APIs</div>
+
+				<p>Engage our APIs and deepen the Partner relationship or connect with our rich ecosystem of Partner APIs.
+				</p>
+				<p class="more">
+					<span class="glyphicon glyphicon-play"></span> Read more on this
+				<p>
+			</div>
+			<div class="col-sm-3 feature">
+				<div class="title">Enterprise APIs</div>
+
+				<p>Bring out Enterprise class APIs to your applications, leveraging reliable APIs at mutliple, flexible access tiers.</p>
+				<p class="more">
+					<span class="glyphicon glyphicon-play"></span> Read more on this
+				<p>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/cm_api.js"></script>
+</body>
+</html>

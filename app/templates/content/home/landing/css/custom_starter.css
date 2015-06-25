@@ -1,0 +1,16 @@
+.cm_hero {
+  width: 800px;
+}
+
+.cm_hero .button {
+  margin-top: 0px;
+  margin-right: 100px;
+}
+
+.button a:hover {
+  background-color: #41b0dc;
+}
+
+.button a {
+  background-color: #41b0dc;
+}
