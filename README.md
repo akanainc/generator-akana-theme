@@ -7,7 +7,7 @@ Description:
 Example:
     `yo akana-community-manager-default-theme`
 
-You'll be prompted for a company name (ex. `Custom Starter`) and a directory named `CM_CustomStarter` will be created with the following contents:
+You'll be prompted for a company name (ex. `Custom Starter`) and a directory named `CM_` plus the company name (ex.`CM_CustomStarter`) will be created with the following contents:
 
 
 * `contents/`: a directory that contains a landing page customization, and can be uploaded to `contents/home/landing`
