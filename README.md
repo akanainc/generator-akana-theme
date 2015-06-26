@@ -5,7 +5,7 @@ Description:
     This generator provides a set of starter customization files for customizing the Default Theme of Akana's Community Manager.
 
 Example:
-    `yo akana-community-manager-default-theme`
+    `yo akana-theme`
 
 You'll be prompted for a company name (ex. `Custom Starter`) and a directory named `CM_` plus the company name (ex.`CM_CustomStarter`) will be created with the following contents:
 
@@ -23,15 +23,17 @@ See [Authoring Yeoman Generators](http://yeoman.io/authoring/index.html) as well
 # Usage
 
 ```
-npm install -g generator-akana-community-manager-default-theme
-yo akana-community-manager-default-theme
+npm install -g generator-akana-theme
+yo akana-theme
 ```
 
 # Changelog
 
 ## 0.1.1 20150626
 * added `README.md` with template info
-* added yo questions for custom.less's `main-color`, local.conf's e-mail and cm url, and 
+* added yo questions for custom.less's `main-color`, local.conf's e-mail and cm url
+* modifications for templating company name in resources/theme/default/i18n and in content/home/landing
+* renamed from `generator-akana-community-manager-default-theme` to `generator-akana-theme`
 
 ## 0.1.0 20150625
 * Creation
