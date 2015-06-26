@@ -1,6 +1,6 @@
 {
   "name": "generator-akana-community-manager-default-theme",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Default Theme customization for Akana Community Manager developer portal",
   "files": [
     "app",

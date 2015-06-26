@@ -26,3 +26,12 @@ See [Authoring Yeoman Generators](http://yeoman.io/authoring/index.html) as well
 npm install -g generator-akana-community-manager-default-theme
 yo akana-community-manager-default-theme
 ```
+
+# Changelog
+
+## 0.1.1 20150626
+* added `README.md` with template info
+* added yo questions for custom.less's `main-color`, local.conf's e-mail and cm url, and 
+
+## 0.1.0 20150625
+* Creation

@@ -1,11 +1,12 @@
 /**
  *  Commonly used variables to customize styles
- *  Tenant: Open
+ *  Tenant: <%= props.companyName %>
  *  Theme: Default  
  */
 
 // base color, often used for navbar (left or top) background color, link text color, button background color, etc 
 // @main-color: #2683b4;
+@main-color: <%= props.mainColor %>;
 
 // when base color is used as a background, what's the text color on top? 
 // @inverse-color: #fff;
