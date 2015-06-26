@@ -22,7 +22,7 @@ module.exports = generators.Base.extend({
   prompting: {
   	askFor: function () {
 	  	var done = this.async();
-	  	this.log(yosay('Hello! Let\'s create an Akana Community Manager Default Theme customization.'));
+	  	this.log(yosay('Hello! Let\'s create an Akana Community Manager Theme customization.'));
 
 	  	var prompts = [{
         type: 'input',
