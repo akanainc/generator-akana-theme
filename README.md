@@ -19,6 +19,14 @@ You'll be prompted for a company name (ex. `Custom Starter`) and a directory nam
 
 See [Authoring Yeoman Generators](http://yeoman.io/authoring/index.html) as well as the [generator-generator](https://github.com/yeoman/generator-generator) for more info.
 
+For local development usage, to allow `yo` to look locally rather than npm:
+
+* clone this repo
+* cd `generator-akana-theme`
+* `npm link`
+
+Now `yo` will look for the cloned repo, local copy, of the generator.
+
 
 # Usage
 
