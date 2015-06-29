@@ -7,6 +7,13 @@ module.exports = generators.Base.extend({
   constructor: function () {
     generators.Base.apply(this, arguments);
 
+    this.option('atmotool', {
+      type: Boolean,
+      required: false,
+      defaults: false,
+      desc: 'When specified, will create a local.conf for use with atmotool'
+    });
+
     this.option('flat', {
 	  type: Boolean,
 	  required: false,
@@ -80,7 +87,9 @@ module.exports = generators.Base.extend({
       this.template('custom.less', this.companyDir +  'custom.less');
       this.directory('resources',  this.companyDir + 'resources');
       this.directory('content', this.companyDir + 'content');
-      this.template('local.conf', this.companyDir + 'local.conf');
+      if (this.options.atmotool) {
+         this.template('local.conf', this.companyDir + 'local.conf');
+      }
   	 },
 
      config: function() {
