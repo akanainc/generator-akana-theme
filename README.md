@@ -1,5 +1,7 @@
 # Generator for Akana Community Manager Default Theme
 
+[npm](https://www.npmjs.com/package/generator-akana-theme)
+
 
 Description:
     This generator provides a set of starter customization files for customizing the Default Theme of Akana's Community Manager.

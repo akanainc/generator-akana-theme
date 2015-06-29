@@ -3,10 +3,7 @@
   "version": "0.1.1",
   "description": " Theme customization for Akana Community Manager developer portal",
   "files": [
-    "app",
-    "content",
-    "resources",
-    "custom.less"
+    "app"
   ],
   "keywords": [
     "yeoman-generator",
@@ -20,8 +17,8 @@
   },
   "dependencies": {
     "yeoman-generator": "^0.19.2",
-    "yosay": "^1.0.0"
+    "yosay": "^1.0.4"
   },
-  "repository": "akana/generator-akana-theme",
+  "repository": "bitbucket:akana/generator-akana-theme",
   "license": "MIT"
 }
