@@ -1,13 +1,30 @@
 # Generator for Akana Community Manager Default Theme
 
-[npm](https://www.npmjs.com/package/generator-akana-theme)
+> [Yeoman](http://yeoman.io) generator
+> [npm: generator-akana-theme](https://www.npmjs.com/package/generator-akana-theme)
 
+## Description:
 
-Description:
-    This generator provides a set of starter customization files for customizing the Default Theme of Akana's Community Manager.
+This generator provides a set of starter customization files for customizing the Default Theme of Akana's Community Manager.
 
-Example:
-    `yo akana-theme`
+### Install
+
+Use yeoman to search for and install the generator: `yo` and pick "Install a generator", then search for "akana," and choose "akana-theme".
+
+or...
+
+```
+npm install -g generator-akana-theme
+```
+### Run
+
+Use yeoman and pick `akana-theme`
+
+or ...
+
+```
+yo akana-theme
+```
 
 You'll be prompted for a company name (ex. `Custom Starter`) and a directory named `CM_` plus the company name (ex.`CM_CustomStarter`) will be created with the following contents:
 
@@ -29,13 +46,6 @@ For local development usage, to allow `yo` to look locally rather than npm:
 
 Now `yo` will look for the cloned repo, local copy, of the generator.
 
-
-# Usage
-
-```
-npm install -g generator-akana-theme
-yo akana-theme
-```
 
 # Changelog
 
