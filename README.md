@@ -32,7 +32,6 @@ You'll be prompted for a company name (ex. `Custom Starter`) and a directory nam
 * `contents/`: a directory that contains a landing page customization, and can be uploaded to `contents/home/landing`
 * `resources/`: a directory that contains resources (favicon, site title, images), and can be uploaded to `resources/theme/default`
 * `custom.less`: a `custom.less` file ready for editing
-* `local.conf`: for use with atmotool
 
 # Development
 
@@ -48,6 +47,10 @@ Now `yo` will look for the cloned repo, local copy, of the generator.
 
 
 # Changelog
+
+## 0.2.1 20150627
+* updates to readme
+* moved `local.conf` generation to flag `--atmotool` (i.e. not by default)
 
 ## 0.1.1 20150626
 * added `README.md` with template info
