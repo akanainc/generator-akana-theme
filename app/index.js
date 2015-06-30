@@ -57,17 +57,34 @@ module.exports = generators.Base.extend({
       },
       {
         type: 'input',
-        name: 'cmUrl',
-        message: 'base url for CM',
-        default: 'http://ent.akana-dev.net:9900'
+        name: 'landingHeadline',
+        message: 'Landing page Headline',
+        default: 'Extend your Reach'
       },
       {
         type: 'input',
-        name: 'cmEmail',
-        message: 'admin email for CM',
-        default: 'administrator@cm.akana.demo'
+        name: 'landingTagline',
+        message: 'Landing page Tagline',
+        default: 'APIs you can trust'
       }
       ];
+
+      if (this.options.atmotool) {
+        prompts.push(
+          {
+            type: 'input',
+            name: 'cmUrl',
+            message: 'base url for CM',
+            default: 'http://ent.akana-dev.net:9900'
+          },
+          {
+            type: 'input',
+            name: 'cmEmail',
+            message: 'admin email for CM',
+            default: 'administrator@cm.akana.demo'
+          }
+        );
+       }
 
 	  	this.prompt(prompts, function (props) {
         this.props = props;
