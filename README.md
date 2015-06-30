@@ -48,6 +48,10 @@ Now `yo` will look for the cloned repo, local copy, of the generator.
 
 # Changelog
 
+## 0.2.1 20150627
+* `--atmotool` prompts don't show up by default
+* Landing page headline and tagline
+
 ## 0.2.0 20150627
 * updates to readme
 * moved `local.conf` generation to flag `--atmotool` (i.e. not by default)
