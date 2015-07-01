@@ -1,6 +1,6 @@
 {
   "name": "generator-akana-theme",
-  "version": "0.2.2",
+  "version": "0.2.1",
   "description": " Theme customization for Akana Community Manager developer portal",
   "files": [
     "app"
@@ -20,5 +20,5 @@
     "yosay": "^1.0.4"
   },
   "repository": "bitbucket:akana/generator-akana-theme",
-  "license": "MIT"
+  "license": "Apache-2.0"
 }

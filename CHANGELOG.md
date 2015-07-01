@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.3 20150701
+* changing license to Apache 2 instead of MIT, corporate
+
 ## 0.2.2 20150701
 * adding `.gitignore` for *.conf files when atmotool is used
 
