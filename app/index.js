@@ -14,12 +14,6 @@ module.exports = generators.Base.extend({
       desc: 'When specified, will create a local.conf for use with atmotool'
     });
 
-    this.option('flat', {
-      type: Boolean,
-      required: false,
-      defaults: false,
-      desc: 'When specified, custom starter will be created at the top level of the project.'
-    });
   },
 
   initializing: function () {
@@ -31,12 +25,20 @@ module.exports = generators.Base.extend({
       var done = this.async();
       this.log(yosay('Hello! Let\'s create an Akana Community Manager Theme customization.'));
 
-      var prompts = [{
-        type: 'input',
-        name: 'companyName',
-        message: 'Please provide a company name',
-        default: 'Custom Starter'
-      },
+      var prompts = [
+        {
+          type: 'list',
+          name: 'defaultVersion',
+          message: 'Customization option',
+          choices: ['hero', 'showcase'],
+          default: 'hero'
+        },
+        {
+          type: 'input',
+          name: 'companyName',
+          message: 'Please provide a company name',
+          default: 'Custom Starter'
+        },
         {
           type: 'input',
           name: 'author',
@@ -67,9 +69,10 @@ module.exports = generators.Base.extend({
           message: 'Landing page Tagline',
           default: 'APIs you can trust'
         }
-        ];
+      ];
 
       // check for atmotool option / flag
+      // Note: could use the inquire.js question object's 'when'
       if (this.options.atmotool) {
         prompts.push(
           {
@@ -83,6 +86,12 @@ module.exports = generators.Base.extend({
             name: 'cmEmail',
             message: 'admin email for CM',
             default: 'administrator@cm.akana.demo'
+          },
+          {
+            type: 'password',
+            name: 'cmPassword',
+            message: 'admin password for CM',
+            default: 'password'
           }
         );
       }
@@ -107,6 +116,7 @@ module.exports = generators.Base.extend({
       this.directory('content', this.companyDir + 'content');
       if (this.options.atmotool) {
         this.template('local.conf', this.companyDir + 'local.conf');
+        this.template('.gitignore', this.companyDir + '.gitignore');
       }
     },
 
