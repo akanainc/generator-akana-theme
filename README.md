@@ -1,11 +1,16 @@
 # Generator for Akana Community Manager Default Theme
 
 > [Yeoman](http://yeoman.io) generator
+
 > [npm: generator-akana-theme](https://www.npmjs.com/package/generator-akana-theme)
 
-## Description:
-
 This generator provides a set of starter customization files for customizing the Default Theme of Akana's Community Manager.
+
+For more information on Akana's API Manager Developer Portal, Community Manager, see the following:
+
+* [Community Manager - API Developer Portal](https://www.akana.com/products/api-portal)
+* [Community Manager docs](http://docs.akana.com/cm/index.html)
+* [Customizing the User Interface](http://docs.akana.com/cm/share/cm_customizing_ui.htm) 
 
 ### Install
 
