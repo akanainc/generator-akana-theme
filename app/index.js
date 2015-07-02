@@ -26,6 +26,7 @@ module.exports = generators.Base.extend({
       this.log(yosay('Hello! Let\'s create an Akana Community Manager Theme customization.'));
 
       var prompts = [
+      /*
         {
           type: 'list',
           name: 'defaultVersion',
@@ -33,6 +34,7 @@ module.exports = generators.Base.extend({
           choices: ['hero', 'showcase'],
           default: 'hero'
         },
+        */
         {
           type: 'input',
           name: 'companyName',
@@ -68,6 +70,40 @@ module.exports = generators.Base.extend({
           name: 'landingTagline',
           message: 'Landing page Tagline',
           default: 'APIs you can trust'
+        },
+        {
+          type: 'list',
+          name: 'headerType',
+          choices: ['transparent', 'dark'],
+          message: "Header type",
+          default: 'transparent'
+        },
+        {
+          type: 'input',
+          name: 'headerGradientTop',
+          message: 'dark gradient top',
+          default: '#5a5b5d',
+          when: function (answers) {
+            return answers.headerType === 'dark';
+          }
+        },
+        {
+          type: 'input',
+          name: 'headerGradientMiddle',
+          message: 'dark gradient middle',
+          default: '#47474a',
+          when: function (answers) {
+            return answers.headerType === 'dark';
+          }
+        },
+        {
+          type: 'input',
+          name: 'headerGradientBottom',
+          message: 'dark gradient bottom',
+          default: '#3e3f41',
+          when: function (answers) {
+            return answers.headerType === 'dark';
+          }
         }
       ];
 

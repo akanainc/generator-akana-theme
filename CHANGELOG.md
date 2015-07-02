@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.4 20150701
+* adding header choice: transparent (default), dark gradient
+
 ## 0.2.3 20150701
 * changing license to Apache 2 instead of MIT, corporate
 

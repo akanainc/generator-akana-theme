@@ -316,3 +316,22 @@
 //#Signup .wizardTab.tab3, #Signup .wizardTabTitle.tab3  {
 //	display: none;
 //}
+
+<% if (props.headerType === 'dark'){ %>
+// fill background of header with gradient, top to bottom
+// bottom: <%= props.headerGradientBottom %>
+// middle: <%= props.headerGradientMiddle %>
+// top   : <%= props.headerGradientTop %>
+div#container_Header {
+        position: relative;
+        width: 100%;
+        background: @main-color; /* Old browsers */
+        background: -moz-linear-gradient(top,  <%= props.headerGradientTop %> 0%, <%= props.headerGradientMiddle %> 60%, <%= props.headerGradientBottom %> 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,<%= props.headerGradientTop %>), color-stop(60%,<%= props.headerGradientMiddle %>), color-stop(100%,<%= props.headerGradientBottom %>)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  <%= props.headerGradientTop %> 0%,<%= props.headerGradientMiddle %> 60%,<%= props.headerGradientBottom %> 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  <%= props.headerGradientTop %> 0%,<%= props.headerGradientMiddle %> 60%,<%= props.headerGradientBottom %> 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  <%= props.headerGradientTop %> 0%,<%= props.headerGradientMiddle %> 60%,<%= props.headerGradientBottom %> 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  <%= props.headerGradientTop %> 0%,<%= props.headerGradientMiddle %> 60%,<%= props.headerGradientBottom %> 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='<%= props.headerGradientTop %>', endColorstr='<%= props.headerGradientBottom %>',GradientType=0 ); /* IE6-9 */
+}
+<% }%>
