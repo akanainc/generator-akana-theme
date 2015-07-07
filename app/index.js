@@ -104,6 +104,27 @@ module.exports = generators.Base.extend({
           when: function (answers) {
             return answers.headerType === 'dark';
           }
+        },
+        {
+          type: 'input',
+          name: 'logoImage',
+          message: 'logo image name',
+          default: 'atmologo.png'
+        },
+        {
+          type: 'input',
+          name: 'logoW',
+          message: 'width of the logo (px), max 295px',
+          default: 202,
+          validate: function (width) {
+            return width <= 295;
+          }
+        },
+        {
+          type: 'input',
+          name: 'landingHeroImage',
+          message: 'hero image name',
+          default: 'starter_industries.jpg'
         }
       ];
 
@@ -159,6 +180,16 @@ module.exports = generators.Base.extend({
     config: function () {
       this.directory('config');
     }
+  },
+
+  end: function () {
+    if (this.props.logoImage != "atmologo.png") {
+      this.log('Please remember to place ' + this.props.logoImage + ' in the ' + this.companyDir + 'resources/theme/default/styles/images directory.');
+    }
+    if (this.props.landingHeroImage != "starter_industries.jpg") {
+      this.log('Please remember to place ' + this.props.landingHeroImage + ' in the ' + this.companyDir + 'content/home/landing/images directory.')
+    }
+    this.log(yosay('Happy Community Managing! - Akana http://akana.com'));
   }
 
 });

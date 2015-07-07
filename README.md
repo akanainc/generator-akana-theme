@@ -6,6 +6,8 @@
 
 This generator provides a set of starter customization files for customizing the Default Theme of Akana's Community Manager.
 
+Once the starter project has been created, you will need Platform Admin access to a Community Manager instance to upload them to the appropriate place within the CM CMS.
+
 For more information on Akana's API Manager Developer Portal, Community Manager, see the following:
 
 * [Community Manager - API Developer Portal](https://www.akana.com/products/api-portal)

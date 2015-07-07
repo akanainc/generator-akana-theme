@@ -1,17 +1,25 @@
 /**
  *  Commonly used variables to customize styles
  *  Tenant: <%= props.companyName %>
- *  Theme: Default  
+ *  Theme: Default
  */
 
-// base color, often used for navbar (left or top) background color, link text color, button background color, etc 
+// base color, often used for navbar (left or top) background color, link text color, button background color, etc
 // @main-color: #2683b4;
 @main-color: <%= props.mainColor %>;
 
-// when base color is used as a background, what's the text color on top? 
+// top left logo image path
+// @logo-img: url("images/logo_50.png");
+<% if (props.logoImage != "atmologo.png") { %>@logo-img: url("images/<%= props.logoImage %>");<% }%>
+
+// width of the logo, max 295px; logo height is fixed at 46px
+// @logo-width: 232px;
+<% if (props.logoImage != "atmologo.png") { %>@logo-width: <%= props.logoW %>px;<% }%>
+
+// when base color is used as a background, what's the text color on top?
 // @inverse-color: #fff;
 
-// the main color of the entire page's background 
+// the main color of the entire page's background
 // @canvas-color: @inverse-color;
 
 // color of link text
@@ -59,10 +67,10 @@
 // "active" text color of the secondary menus, under each main item in the left nav (when item is open)
 // @leftnav-subnav-active-text-color: @disabled-text-color;
 
-// color of content area text that is not a link 
+// color of content area text that is not a link
 // @plain-text-color: #3d4242;
 
-// horizontal rules' color within the content section of each page 
+// horizontal rules' color within the content section of each page
 // @content-divider-color: lighten(@plain-text-color,30%);
 
 // paragraph header within the content section of each page
@@ -79,37 +87,37 @@
 // modal overlay, the semitransparent background that makes the modal dialog stand out more in front (default is gray); the color will appear to be 70% lighter than defined below because of the transparency
 // @modal-overlay-bg-color: @plain-text-color;
 
-// popup dialog header background color 
+// popup dialog header background color
 // @dialog-header-bg-color: #cfd7d5;
 
-// popup dialog header text color 
+// popup dialog header text color
 // @dialog-header-text-color: @main-color;
 
-// default text color of the top navigation 
+// default text color of the top navigation
 // @topnav-text-color: @inverse-color;
 
-// bg color of the top navigation 
+// bg color of the top navigation
 // @topnav-bg-color: @main-color;
 
 // color of the separator within the topnav "user info" tools
 // @topnav-separator-color: @topnav-text-color;
 
-// border color of the top navigation individual main elements: user tools, signin trigger, "add new", and search; if no border then use the c @topnav-bg-color 
+// border color of the top navigation individual main elements: user tools, signin trigger, "add new", and search; if no border then use the c @topnav-bg-color
 // @topnav-border-color: @topnav-bg-color;
 
-// topnav default link color 
+// topnav default link color
 // @topnav-link-text-color: @topnav-text-color;
 
-// topnav submenu header background color 
+// topnav submenu header background color
 // @topnav-submenu-header-bg-color: @dialog-header-bg-color;
 
-// topnav submenu header text color 
+// topnav submenu header text color
 // @topnav-submenu-header-text-color: @dialog-header-text-color;
 
-// topnav submenu default text color 
+// topnav submenu default text color
 // @topnav-submenu-text-color: @plain-text-color;
 
-// topnav submenu default link color 
+// topnav submenu default link color
 // @topnav-submenu-link-text-color: @topnav-bg-color;
 
 // topnav submenu specifically for popular searches
@@ -133,22 +141,22 @@
 // topnav notification count divider color
 // @topnav-notification-count-divider-color: @topnav-notification-count-border-color;
 
-// topnav search button background color 
+// topnav search button background color
 // @topnav-search-button-bg-color: @topnav-bg-color;
 
-// topnav search field background color 
+// topnav search field background color
 // @topnav-input-bg-color: #eceded;
 
 // topnav search field border color
 // @topsearch-border-color: @topnav-border-color;
 
-// leftnav background color 
+// leftnav background color
 // @leftnav-bg-color: @main-color;
 
-// leftnav header, found for example on a leftnav set of board filters, text color 
+// leftnav header, found for example on a leftnav set of board filters, text color
 // @leftnav-header-text-color: screen(lighten(@plain-text-color,25%),#ccc);
 
-// any horizontal rule that appears in the leftnav 
+// any horizontal rule that appears in the leftnav
 // @leftnav-divider-color: @leftnav-active-text-color;
 
 // border color of input fields when focused
@@ -174,12 +182,6 @@
 
 // default text color of input fields
 // @input-text-blurred-color: #999;
-
-// top left logo image path
-// @logo-img: url("images/logo_50.png");
-
-// width of the logo, max 295px; logo height is fixed at 46px
-// @logo-width: 232px;
 
 // default link color
 // @link-color: @main-color;

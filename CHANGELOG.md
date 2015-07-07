@@ -1,5 +1,8 @@
 # Changelog
 
+# 0.3.0 20150707
+* added logo image, logo image height, and hero background image questions. Note, these do not create or resize images, only perform substitions. Users will still have to provide images into the specified locations.
+
 ## 0.2.4 20150701
 * adding header choice: transparent (default), dark gradient
 
