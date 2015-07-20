@@ -1,5 +1,11 @@
 # Changelog
 
+# 0.3.3 20150720
+* Update AngularJS to 1.4.3
+
+# 0.3.2 20150713
+* repo update
+
 # 0.3.0 20150707
 * added logo image, logo image height, and hero background image questions. Note, these do not create or resize images, only perform substitions. Users will still have to provide images into the specified locations.
 

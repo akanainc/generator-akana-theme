@@ -1,6 +1,6 @@
 {
   "name": "generator-akana-theme",
-  "version": "0.3.0",
+  "version": "0.3.3",
   "description": " Theme customization for Akana Community Manager developer portal",
   "files": [
     "app"
@@ -19,6 +19,7 @@
     "yeoman-generator": "^0.19.2",
     "yosay": "^1.0.4"
   },
-  "repository": "bitbucket:akana/generator-akana-theme",
-  "license": "Apache-2.0"
+  "repository": "AkanaInc/generator-akana-theme",
+  "license": "Apache-2.0",
+  "bugs":  "https://github.com/AkanaInc/generator-akana-theme/issues"
 }
