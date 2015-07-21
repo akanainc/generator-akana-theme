@@ -2,8 +2,6 @@
 
 > [Yeoman](http://yeoman.io) generator
 
-> [npm: generator-akana-theme](https://www.npmjs.com/package/generator-akana-theme)
-
 [![NPM](https://nodei.co/npm/generator-akana-theme.png)](https://www.npmjs.com/package/generator-akana-theme)
 
 This generator provides a set of starter customization files for customizing the Default Theme of Akana's Community Manager.
