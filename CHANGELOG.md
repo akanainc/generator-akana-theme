@@ -1,5 +1,8 @@
 # Changelog
 
+# 0.3.5 20150805
+* adding uploadall example for atmotool usage
+
 # 0.3.4 20150805
 * minor change for atmotool option
 

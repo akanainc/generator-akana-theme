@@ -174,6 +174,7 @@ module.exports = generators.Base.extend({
       if (this.options.atmotool) {
         this.template('template_local.conf', this.companyDir + 'local.conf');
         this.template('template_gitignore', this.companyDir + '.gitignore');
+        this.template('uploadall', this.companyDir + 'uploadall');
       }
     },
 
@@ -183,11 +184,11 @@ module.exports = generators.Base.extend({
   },
 
   end: function () {
-    if (this.props.logoImage != "atmologo.png") {
-      this.log('Please remember to place ' + this.props.logoImage + ' in the ' + this.companyDir + 'resources/theme/default/styles/images directory.');
+    if (this.props.logoImage !== "atmologo.png") {
+      this.log('Please remember to place ' + this.props.logoImage + ' in the ' + this.companyDir + 'resources/theme/default/style/images directory.');
     }
-    if (this.props.landingHeroImage != "starter_industries.jpg") {
-      this.log('Please remember to place ' + this.props.landingHeroImage + ' in the ' + this.companyDir + 'content/home/landing/images directory.')
+    if (this.props.landingHeroImage !== "starter_industries.jpg") {
+      this.log('Please remember to place ' + this.props.landingHeroImage + ' in the ' + this.companyDir + 'content/home/landing/images directory.');
     }
     this.log(yosay('Happy Community Managing! - Akana http://akana.com'));
   }
