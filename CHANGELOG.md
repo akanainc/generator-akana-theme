@@ -1,5 +1,8 @@
 # Changelog
 
+# 0.3.4 20150805
+* minor change for atmotool option
+
 # 0.3.3 20150720
 * Update AngularJS to 1.4.3
 
