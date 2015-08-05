@@ -172,8 +172,8 @@ module.exports = generators.Base.extend({
       this.directory('resources',  this.companyDir + 'resources');
       this.directory('content', this.companyDir + 'content');
       if (this.options.atmotool) {
-        this.template('local.conf', this.companyDir + 'local.conf');
-        this.template('.gitignore', this.companyDir + '.gitignore');
+        this.template('template_local.conf', this.companyDir + 'local.conf');
+        this.template('template_gitignore', this.companyDir + '.gitignore');
       }
     },
 
