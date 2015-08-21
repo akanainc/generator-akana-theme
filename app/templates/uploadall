@@ -1,5 +1,7 @@
 #!/bin/sh
-
-atmotool upload file --path /content/home/landing PREFIX_content-home-landing.zip
-atmotool upload file --path /resources/theme/default PREFIX_resources-theme-default.zip
+PREFIX=YOUR_PREFIX_HERE
+atmotool zip --prefix ${PREFIX} content/home/landing
+atmotool zip --prefix ${PREFIX} resources/theme/default
+atmotool upload file --path /content/home/landing ${PREFIX}_content-home-landing.zip
+atmotool upload file --path /resources/theme/default ${PREFIX}_resources-theme-default.zip
 atmotool upload less custom.less
