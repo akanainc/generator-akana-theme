@@ -1,5 +1,11 @@
 # Changelog
 
+# 0.3.6 20150922
+* updated template for atmotool uploadall to interpolate 
+
+# 0.3.6 20150922
+* corrected uploadall shell script
+
 # 0.3.5 20150805
 * adding uploadall example for atmotool usage
 

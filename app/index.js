@@ -237,7 +237,17 @@ module.exports = generators.Base.extend({
       if (this.options.atmotool) {
         this.template('template_local.conf', this.companyDir + 'local.conf');
         this.template('template_gitignore', this.companyDir + '.gitignore');
-        //this.template('template_uploadall', this.companyDir + 'uploadall');
+        // https://github.com/yeoman/yeoman/issues/1235
+        // https://github.com/yeoman/generator/pull/489
+        // modern way of copying, as opposed to the above convenience
+        this.fs.copyTpl(
+          this.templatePath('template_uploadall'),
+          this.destinationPath(this.companyDir + 'uploadall'),
+          this,
+          {
+            interpolate: /<%=([\s\S]+?)%>/g
+          }
+        );
       }
     },
 

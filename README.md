@@ -51,3 +51,5 @@ For local development usage, to allow `yo` to look locally rather than npm:
 * `npm link`
 
 Now `yo` will look for the cloned repo, local copy, of the generator.
+
+If you don't know where npm keeps its files, try `npm config get prefix` + `/lib/node_modules`.
