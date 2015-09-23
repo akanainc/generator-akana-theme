@@ -11,7 +11,7 @@ module.exports = generators.Base.extend({
       type: Boolean,
       required: false,
       defaults: false,
-      desc: 'When specified, will create a local.conf for use with atmotool'
+      desc: 'When specified, will create a local.conf and uploadall script for use with atmotool'
     });
 
   },
@@ -21,6 +21,8 @@ module.exports = generators.Base.extend({
   },
 
   prompting: {
+
+    // basic questions
     askFor: function () {
       var done = this.async();
       this.log(yosay('Hello! Let\'s create an Akana Community Manager Theme customization.'));
@@ -130,8 +132,15 @@ module.exports = generators.Base.extend({
 
       // check for atmotool option / flag
       // Note: could use the inquire.js question object's 'when'
+      /*
       if (this.options.atmotool) {
         prompts.push(
+          {
+            type: 'input',
+            name: 'cmPrefix',
+            message: "short name for zips",
+            //default: answers.companyName.replace(/\s/g, '').toLowerCase()
+          },
           {
             type: 'input',
             name: 'cmUrl',
@@ -152,6 +161,7 @@ module.exports = generators.Base.extend({
           }
         );
       }
+      */
 
       this.prompt(prompts, function (props) {
         this.props = props;
@@ -159,7 +169,60 @@ module.exports = generators.Base.extend({
         this.companyName = props.companyName;
         done();
       }.bind(this));
-    }
+
+    },
+
+    askAboutAtmotool: function () {
+
+      // if there's --atmotool, continue
+      if (!this.options.atmotool) {
+        return;
+      }
+
+      var done = this.async();
+      var prompts = [
+        {
+          type: 'input',
+          name: 'lcCompanyName',
+          message: 'a company name',
+          default: this.companyName.replace(/\s/g, '').toLowerCase()
+        },
+        {
+          type: 'input',
+          name: 'cmUrl',
+          message: 'base url for CM',
+          default: 'http://ent.akana-dev.net:9900'
+        },
+        {
+          type: 'input',
+          name: 'cmEmail',
+          message: 'admin email for CM',
+          default: 'administrator@cm.akana.demo'
+        },
+        {
+          type: 'password',
+          name: 'cmPassword',
+          message: 'admin password for CM',
+          default: 'password'
+        }
+      ];
+
+      this.log('Atmotool questions...');
+      this.prompt(prompts, function (props) {
+        var source = this.props;
+        var key;
+        // combine new props to existing
+        for (key in props) {
+          if (props.hasOwnProperty(key)) {
+            source[key] = props[key];
+          }
+        }
+        this.config.set(source);
+        this.lcCompanyName = props.lcCompanyName;
+        done();
+      }.bind(this));
+
+    },
 
   },
 
@@ -174,7 +237,7 @@ module.exports = generators.Base.extend({
       if (this.options.atmotool) {
         this.template('template_local.conf', this.companyDir + 'local.conf');
         this.template('template_gitignore', this.companyDir + '.gitignore');
-        this.template('uploadall', this.companyDir + 'uploadall');
+        //this.template('template_uploadall', this.companyDir + 'uploadall');
       }
     },
 
@@ -190,7 +253,7 @@ module.exports = generators.Base.extend({
     if (this.props.landingHeroImage !== "starter_industries.jpg") {
       this.log('Please remember to place ' + this.props.landingHeroImage + ' in the ' + this.companyDir + 'content/home/landing/images directory.');
     }
-    this.log(yosay('Happy Community Managing! - Akana http://akana.com'));
+    this.log(yosay('Happy Community Managing! - Akana http://akana.com @akanainc'));
   }
 
 });
