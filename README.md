@@ -40,6 +40,12 @@ You'll be prompted for a company name (ex. `Custom Starter`) and a directory nam
 * `resources/`: a directory that contains resources (favicon, site title, images), and can be uploaded to `resources/theme/default`
 * `custom.less`: a `custom.less` file ready for editing
 
+## Theme CSS Variations
+
+* `transparent` - the default Community Manager theme, with a transparent header and fixed width wide layout (900px) 
+* `dark` - the top header is a solid gradient, you choose the top middle and bottom colors for the gradient
+* `solid-wide` - solid top header (single color), and full-width layout; a variation on `transparent` - also note `atmologo_transparent.png` Akana logo is included (179 px width)
+
 # Development
 
 See [Authoring Yeoman Generators](http://yeoman.io/authoring/index.html) as well as the [generator-generator](https://github.com/yeoman/generator-generator) for more info.

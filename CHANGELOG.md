@@ -1,5 +1,8 @@
 # Changelog
 
+* 0.4.1 20160118
+* updated readme info on theme css options (solid-wide, dark, transparent)
+
 # 0.4.0 20160118
 * Addition of `solid-wide` theme option
 
