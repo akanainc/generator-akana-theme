@@ -337,3 +337,323 @@ div#container_Header {
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='<%= props.headerGradientTop %>', endColorstr='<%= props.headerGradientBottom %>',GradientType=0 ); /* IE6-9 */
 }
 <% }%>
+
+<% if (props.headerType === 'solid-wide') {%>
+
+#Main, #container_Header, #container_Footer {
+    width: auto !important;
+}
+
+.Content-Widest {
+    width: auto !important;
+}
+
+.soa-ui-cm-container-top {
+        width: auto !important;
+}
+
+.Left {
+        margin-right: 0;
+        width: 200px !important;
+}
+
+#container_Left {
+    display: table-cell !important;
+        width: 200px !important;
+}
+
+#container_Content {    
+        display: table-cell !important;
+        vertical-align: top !important;
+        width: 100% !important;
+}
+
+#Main > div {
+    float: none;
+}
+
+.selectbox.truncate {
+    width: auto !important;
+}
+
+.searchoption .soa-ui-cm-input-container {
+        width: auto !important;
+}
+
+.searchoption .soa-ui-cm-input-container #collection_options_search, .searchoption .soa-ui-cm-input-container #tagtext {
+        width: 85% !important;
+}
+
+div.cwrap div.cwrap_left {
+        float: none !important;
+    display: table-cell !important;
+}
+
+div.cwrap div.cwrap_right {
+    display: table-cell !important;
+    width: 100% !important;
+    vertical-align: top !important;
+    float: none !important;
+}
+
+.item_image {
+    display: table-cell !important;;
+    float: none !important;
+}
+
+.item_content {
+    display: table-cell !important;;
+    float: none !important;
+    width: 100% !important;
+    vertical-align: top !important;
+}
+
+//left nav update
+div.sidebar_menu .level_0 .level_0 {
+    background: none !important;
+    font-size: 14px !important;
+    font-weight: normal !important;
+    height: 40px !important;
+    line-height: 40px !important;
+    padding: 0 0 0 10px !important;
+}
+
+div.sidebar_menu .level_0 > ul {
+    font-size: 12px !important;
+    font-weight: normal !important;
+}
+
+div.sidebar_menu .level_0 > a > ul > li.activemenu > a, div.sidebar_menu .level_0 .unordered .resourceMenuTitle > a {
+    font-weight: normal !important;
+}
+div.sidebar_menu .level_0 > a > ul > li > a, div.sidebar_menu .level_0 .unordered .resourceMenuTitle > a {
+    font-size: 12px !important;
+}
+
+//remove LGM from licenses page
+.legalButtons {
+    -moz-border-bottom-colors: none !important;
+    -moz-border-left-colors: none !important;
+    -moz-border-right-colors: none !important;
+    -moz-border-top-colors: none !important;
+    border-color: -moz-use-text-color #cfd6d4 #cfd6d4 !important;
+    border-image: none !important;
+    border-style: none solid !important;
+    border-width: medium 1px 1px !important;
+    padding: 20px 20px 10px !important;
+    float: none !important;
+}
+
+.legalListLeftAdmin {
+    display: none !important;
+}
+
+.legalListRightAdmin {
+    position: inherit !important;
+    top: 0px !important;
+}
+
+.legalListRight {
+    float: none !important;
+    width: auto !important;
+}
+
+//Font sizes
+body {
+    color: #3d4242;
+    font: 14px/18px Helvetica,Arial,sans-serif !important;
+}
+
+td, body, select, textarea, input {
+    font-size: 14px !important;
+}
+
+h1 {
+    font-size: 20px !important;
+    font-weight: normal !important;
+}
+
+h3 {
+    font-size: 16px !important;
+    font-weight: normal !important;
+}
+
+h4 {
+    font-size: 14px !important;
+}
+
+div.cwrap div.cwrap_right h2, div.cwrap_right h3 {
+    font-size: 14px !important;
+}
+
+.soa-ui-cm-table {
+    font: 14px/18px Helvetica,Arial,sans-serif !important;
+}
+
+div.rtitle_wrap div.rtitle_right {
+    font-size: 14px !important;
+}
+
+div.cwrap div.cwrap_left ul.meta li {
+    font-size: 12px !important;
+}
+
+div.rsc_imglist h3 {
+    font-size: 12px !important;
+}
+
+.item_content {
+    font-size: 14px !important;
+}
+
+.ResourceTitle > h1 {
+    font-size: 20px !important;
+    line-height: 30px !important;
+}
+
+.item_content > h3 {
+    font-size: 16px !important;
+    font-weight: normal !important;
+}
+
+.collection_item_title a:link, .collection_item_title a:visited, .collection_item_title a:active, .collection_item_title a:hover {
+    font-size: 16px !important;
+    font-weight: normal !important;
+}
+
+//Bigger title bar
+div.rtitle_wrap {
+    height: 40px !important;
+}
+
+div.rtitle_wrap div.rtitle_right {
+    padding: 12px 10px 0 0 !important;
+}
+
+div.rtitle_wrap div.rtitle_right > span {
+    font-size: 14px !important;
+    font-weight: normal !important;
+}
+
+.soa-ui-cm-content-header > h1.soa-ui-cm-icon::before {
+    top: 6px !important;
+}
+
+.ResourceTitle > .soa-ui-cm-content-header > h1, .ApiDocsResourceTitle > .soa-ui-cm-content-header > h1 {
+    font-size: 20px !important;
+    font-weight: normal !important;
+    height: 30px !important;
+    line-height: 30px !important;
+    top: 6px !important;
+}
+
+.ConfigResources > h1, .SecurityDomainsList > h1, .ConfigCustomStyles > h1, .ConfigApis > h1, .ConfigApps > h1, .ConfigGroups > h1 {
+    background-image: url("images/sprites_cm_open_icons_18_ffffff.png")!important;
+    background-position: 4px -573px !important;
+    line-height: 30px !important;
+    padding: 7px 7px 7px 30px;
+}
+
+
+h1.headerPanel {
+    font-size: 20px !important;
+    font-weight: normal !important;
+    height: 40px !important;
+    line-height: 40px !important;
+}
+
+.soa-ui-cm-content-header > h1 {
+    line-height: 30px !important;
+    min-height: 30px !important;
+}
+
+div.LeftPanel h2.title, fieldset.leftPanel h2.title {
+    font-size: 18px !important;
+    font-weight: normal !important;
+}
+
+#collection_options form label {
+    font-size: 14px !important;
+}
+
+.selectbox-wrapper li, span.selectbox {
+    font-size: 14px !important;
+    line-height: 24px !important;
+}
+
+span.selectbox {
+    height: 24px !important;
+}
+
+.searchoption .soa-ui-cm-input-container {
+    padding: 6px 2px 5px 5px !important;
+}
+
+//Bigger buttons
+.soa-ui-cm-button, .ui-button {
+    font: normal 14px/30px Helvetica,Arial,sans-serif !important;
+}
+
+.apilinks a, .apilink_adddash, .apilink_removedash {
+    line-height: 30px !important;
+}
+
+button, a.button, input.button {
+    font: normal 14px/30px Helvetica,Arial,sans-serif !important;
+}
+
+#APIDetails div.cwrap > div.cwrap_left > div.description > div.editrsc > button {
+    width: 130px !important;
+}
+
+//Remove bold
+#BoardItemsFilter ul.filterBoard > li > h4, #BoardItemsFilter ul.filterBoard > li > label {
+    font-weight: normal !important;
+}
+
+//Bigger search
+.soa-ui-cm-topsearch-fieldset > p .soa-ui-cm-input {
+    font: normal 12px/14px helvetica,arial,sans-serif !important;
+    width: 200px !important;
+}
+
+//Replace icons at top with text
+.soa-ui-cm-openitem-tools .soa-ui-cm-icon-imgtxt {
+    background-image: none !important;
+    display: inline !important;
+    font-size: 12px !important;
+}
+
+.soa-ui-cm-openitem-tools .soa-ui-cm-icon-imgtxt:hover{
+    background-image: none !important;
+}
+
+.soa-ui-cm-topnav .soa-ui-cm-user-tools-menu > li {
+    font-size: 12px !important;
+ }
+
+.soa-ui-cm-openitem-tools > ul.soa-ui-cm-openitem-tools-dashboard-notification > li > a {
+    font-size: 12px !important;
+}
+.soa-ui-cm-openitem-tools > ul > li > a {
+    font-weight: normal !important;
+}
+
+// Hack to remove 'Logged in as'
+.soa-ui-cm-topnav .soa-ui-cm-user-tools-menu > li.soa-ui-cm-user-tools-menu-username {
+    font-size: 0px !important;
+    font-weight: normal !important;
+}
+
+.soa-ui-cm-topnav .soa-ui-cm-user-tools-menu > li.soa-ui-cm-user-tools-menu-username > span {
+    font-size: 12px !important;
+}
+
+//Solid header
+.soa-ui-cm-container-top {
+    background: <%= props.containerHeaderColor %> none repeat scroll 0 0 !important;
+    height: 65px !important;
+    margin: 0 0 10px auto !important;
+ }
+<% }%>
+

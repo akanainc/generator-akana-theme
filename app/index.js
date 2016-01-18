@@ -76,9 +76,53 @@ module.exports = generators.Base.extend({
         {
           type: 'list',
           name: 'headerType',
-          choices: ['transparent', 'dark'],
+          choices: ['transparent', 'dark', 'solid-wide'],
           message: "Header type",
           default: 'transparent'
+        },
+        { type: 'input',
+          name: 'containerHeaderColor',
+          message: 'solid header color',
+          default: '#2683b4',
+          when: function(answers) {
+            return answers.headerType === 'solid-wide'
+          }
+        },
+        {
+          type: 'input',
+          name: 'resourceMenuHeaderAppsHover',
+          message: 'Hover on Apps Menu Title',
+          default: 'My Apps',
+          when: function(answers) {
+            return answers.headerType === 'solid-wide'
+          }
+        },
+        {
+          type: 'input',
+          name: 'resourceMenuHeaderGroupsHover',
+          message: 'Hover on Groups Menu Title',
+          default: 'My Groups',
+          when: function(answers) {
+            return answers.headerType === 'solid-wide'
+          }
+        },
+        {
+          type: 'input',
+          name: 'resourceMenuHeaderApisHover',
+          message: 'Hover on APIs Menu Title',
+          default: 'My APIs',
+          when: function(answers) {
+            return answers.headerType === 'solid-wide'
+          }
+        },
+        {
+          type: 'input',
+          name: 'resourceMenuHeaderAdminHover',
+          message: 'Hover on Admin Menu Title',
+          default: 'Admin',
+          when: function(answers) {
+            return answers.headerType === 'solid-wide'
+          }
         },
         {
           type: 'input',

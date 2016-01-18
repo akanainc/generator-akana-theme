@@ -1,5 +1,14 @@
 # Changelog
 
+# 0.4.0 20160118
+* Addition of `solid-wide` theme option
+
+# 0.3.9 20151020
+* button on banner is main color
+
+# 0.3.8 20151012
+* updated resources i18n for footer
+
 # 0.3.6 20150922
 * updated template for atmotool uploadall to interpolate 
 

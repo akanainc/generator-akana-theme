@@ -8,9 +8,10 @@
 }
 
 .button a:hover {
-  background-color: #41b0dc;
+  background-color: <%= props.mainColor %>;
+  // #41b0dc
 }
 
 .button a {
-  background-color: #41b0dc;
+  background-color: <%= props.mainColor %>;
 }
