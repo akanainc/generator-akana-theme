@@ -41,7 +41,7 @@
 				<h1 style="width:505px;"><%= props.landingHeadline %>
 				<p><%= props.landingTagline %></p></h1>
 
-				<div class="button"><a>Learn More</a></div>
+				<div class="button"><a href="#/search/results?type%3Dapi%26sortBy%3Dcom.soa.sort.order.alphabetical">Learn More</a></div>
 			</div>
 
 		</div>
@@ -62,7 +62,7 @@
 				<div class="title">Developer APIs</div>
 
 				<p>
-				View our {{apis.channel.item.length}} APIs.
+				View our {{apis.channel.item.length}} <span ng-if="apis.channel.item.length===1">API</span><span ng-if="apis.channel.item.length != 1">APIs</span>.
 				</p>
 				<p class="more">
 					<span class="glyphicon glyphicon-play"></span> Read more on this
