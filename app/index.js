@@ -76,7 +76,7 @@ module.exports = generators.Base.extend({
         {
           type: 'list',
           name: 'headerType',
-          choices: ['transparent', 'dark', 'solid-wide'],
+          choices: ['default-transparent', 'default-dark', 'default-wide'],
           message: "Header type",
           default: 'transparent'
         },
@@ -85,7 +85,7 @@ module.exports = generators.Base.extend({
           message: 'solid header color',
           default: '#2683b4',
           when: function(answers) {
-            return answers.headerType === 'solid-wide'
+            return answers.headerType === 'default-wide'
           }
         },
         {
@@ -94,7 +94,7 @@ module.exports = generators.Base.extend({
           message: 'Hover on Apps Menu Title',
           default: 'My Apps',
           when: function(answers) {
-            return answers.headerType === 'solid-wide'
+            return answers.headerType === 'default-wide'
           }
         },
         {
@@ -103,7 +103,7 @@ module.exports = generators.Base.extend({
           message: 'Hover on Groups Menu Title',
           default: 'My Groups',
           when: function(answers) {
-            return answers.headerType === 'solid-wide'
+            return answers.headerType === 'default-wide'
           }
         },
         {
@@ -112,7 +112,7 @@ module.exports = generators.Base.extend({
           message: 'Hover on APIs Menu Title',
           default: 'My APIs',
           when: function(answers) {
-            return answers.headerType === 'solid-wide'
+            return answers.headerType === 'default-wide'
           }
         },
         {
@@ -121,7 +121,7 @@ module.exports = generators.Base.extend({
           message: 'Hover on Admin Menu Title',
           default: 'Admin',
           when: function(answers) {
-            return answers.headerType === 'solid-wide'
+            return answers.headerType === 'default-wide'
           }
         },
         {
@@ -130,7 +130,7 @@ module.exports = generators.Base.extend({
           message: 'dark gradient top',
           default: '#5a5b5d',
           when: function (answers) {
-            return answers.headerType === 'dark';
+            return answers.headerType === 'default-dark';
           }
         },
         {
@@ -139,7 +139,7 @@ module.exports = generators.Base.extend({
           message: 'dark gradient middle',
           default: '#47474a',
           when: function (answers) {
-            return answers.headerType === 'dark';
+            return answers.headerType === 'default-dark';
           }
         },
         {
@@ -148,7 +148,7 @@ module.exports = generators.Base.extend({
           message: 'dark gradient bottom',
           default: '#3e3f41',
           when: function (answers) {
-            return answers.headerType === 'dark';
+            return answers.headerType === 'default-dark';
           }
         },
         {
@@ -173,39 +173,6 @@ module.exports = generators.Base.extend({
           default: 'starter_industries.jpg'
         }
       ];
-
-      // check for atmotool option / flag
-      // Note: could use the inquire.js question object's 'when'
-      /*
-      if (this.options.atmotool) {
-        prompts.push(
-          {
-            type: 'input',
-            name: 'cmPrefix',
-            message: "short name for zips",
-            //default: answers.companyName.replace(/\s/g, '').toLowerCase()
-          },
-          {
-            type: 'input',
-            name: 'cmUrl',
-            message: 'base url for CM',
-            default: 'http://ent.akana-dev.net:9900'
-          },
-          {
-            type: 'input',
-            name: 'cmEmail',
-            message: 'admin email for CM',
-            default: 'administrator@cm.akana.demo'
-          },
-          {
-            type: 'password',
-            name: 'cmPassword',
-            message: 'admin password for CM',
-            default: 'password'
-          }
-        );
-      }
-      */
 
       this.prompt(prompts, function (props) {
         this.props = props;
@@ -284,6 +251,8 @@ module.exports = generators.Base.extend({
         // https://github.com/yeoman/yeoman/issues/1235
         // https://github.com/yeoman/generator/pull/489
         // modern way of copying, as opposed to the above convenience
+        // - use either: fs.copy(templatePath, destinationPath) 
+        // - or: fs.copyTpl(templatePath, destinationPath, modelObject)
         this.fs.copyTpl(
           this.templatePath('template_uploadall'),
           this.destinationPath(this.companyDir + 'uploadall'),
