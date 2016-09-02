@@ -1,5 +1,11 @@
 # Changelog
 
+* 0.4.3 20160830
+* updated Angular to 1.5.8
+
+* 0.4.2 20160328
+* updated Angular to 1.5.3; landing page "APIs" pluralization checks count of apis
+
 * 0.4.1 20160118
 * updated readme info on theme css options (solid-wide, dark, transparent)
 
