@@ -7,14 +7,17 @@
 		function($scope,$http)
 		{
 			$scope.apis;
+			$scope.apiCount = 0;
 
 			$scope.getApis = function() {
 				$http({ method: 'GET', url: '/api/apis'}).
 					success(function(data,status) {
-						console.log(data);
+						//console.log(data);
 						$scope.apis = data;
+						$scope.apiCount = $scope.apis.channel.item.length;
 					}).
 					error(function(data, status) {
+						console.log("error retreiving data")
 						console.log(data);
 					});
 			};
@@ -25,4 +28,4 @@
 
 })();
 
-// AngularJS 1.3.0 beta
+// AngularJS 1.5.8
