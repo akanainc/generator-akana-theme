@@ -1,0 +1,334 @@
+/**
+ *  Commonly used variables to customize styles
+ *  Tenant:  <%= props.companyName %>
+ *  Theme: Hermosa
+ *  NOTE: use rgba or HEX values for colors instead of color names
+ */
+
+// base color, often used for navbar (left or top) background color, link text color, button background color, etc 
+// @main-color: #2683b4;
+@main-color: <%= props.mainColor %>;
+
+// top left logo image path
+// @logo-img: url("images/logo_50.png");
+<% if (props.logoImage != "atmologo.png") { %>@logo-img: url("images/<%= props.logoImage %>");<% }%>
+
+// width of the logo, max 295px; logo height is fixed at 46px
+// @logo-width: 232px;
+<% if (props.logoImage != "atmologo.png") { %>@logo-width: <%= props.logoW %>px;<% }%>
+
+// Theme logo, stop from repeating & center
+a.soa-ui-cm-logo {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+// when base color is used as a background, what's the text color on top? 
+// @inverse-color: #fff;
+
+// the main color of the entire page's background 
+// @canvas-color: @inverse-color;
+
+// color of link text
+// @link-color: @main-color;
+
+// hover color of link text
+// @link-hover-color: @main-color;
+
+// backround color of the header of any box with a defined border and a header -- encompasses both the content section and smaller widgets
+// @box-header-bg-color: @main-color;
+
+// text color of the header of any box with a defined border and a header -- encompasses both the content section and smaller widgets
+// @box-header-text-color: @inverse-color;
+
+// border color of any box with a defined border and a header -- encompasses both the content section and smaller widgets
+// @box-border-color: @main-color;
+
+// background color of any box with a defined border and a header -- encompasses both the content section and smaller widgets
+// @box-bg-color: @canvas-color;
+
+// text color of any box with a defined border and a header -- encompasses both the content section and smaller widgets
+// @box-text-color: @plain-text-color;
+
+// widgets, such as those on dashboard, border color
+// @widget-border-color: @box-border-color;
+
+// widgets, such as those on dashboard, background color
+// @widget-bg-color: @box-bg-color;
+
+// widgets, such as those on dashboard, header background color
+// @widget-header-bg-color: @box-header-bg-color;
+
+// widgets, such as those on dashboard, header text color
+// @widget-header-text-color: @box-header-text-color;
+
+// color of content area text that is not a link 
+// @plain-text-color: #3d4242;
+
+// horizontal rules' color within the content section of each page 
+// @content-divider-color: lighten(@plain-text-color,30%);
+
+// paragraph header within the content section of each page
+// @section-header-text-color: @main-color;
+
+// labels for input fields of forns, typically to the left or over a text field (for example)
+// @label-text-color: @main-color;
+
+// more detailed commonly used variables
+
+// (1) (2) (3)... steps for a wizard
+// @wizard-nav-text-color: @main-color;
+
+// bottom border under the (1) (2) (3)... steps for a wizard
+// @wizard-steps-bottom-border-color: lighten(@section-header-text-color,50%);
+
+// (1) (2) (3)... steps for a wizard that have errors on them
+// @wizard-steps-error-color: #c62026;
+
+// (1) (2) (3)... steps for a wizard that are complete
+// @wizard-steps-ok-color: #50b948;
+
+// modal overlay, the semitransparent background that makes the modal dialog stand out more in front (default is gray); the color will appear to be 70% lighter than defined below because of the transparency
+// @modal-overlay-bg-color: @plain-text-color;
+
+// popup dialog header background color 
+// @dialog-header-bg-color: #cfd7d5;
+
+// popup dialog header text color 
+// @dialog-header-text-color: @main-color;
+
+// default text color of the top navigation 
+// @topnav-text-color: #FFD700;
+
+// bg color of the top navigation 
+// @topnav-bg-color: #8A2BE2;
+
+// color of the separator within the topnav "user info" tools
+// @topnav-separator-color: #1E90FF;
+
+// border color between tabs in topnav
+// @topnav-tab-border-color: #FF6347;
+
+// color of the bell icon in topnav
+// @topnav-notifications-icon-color: #FF00FF;
+
+// color of the notification count background
+// topnav-notifications-badge-bg-color: #DDA0DD;
+
+// color of the notification count number
+// @topnav-notifications-badge-text-color: @topnav-bg-color;
+
+// topnav search field background color 
+// @topnav-search-bg-color: #eceded;
+
+// topnav search field text color
+// @topnav-search-text-color: @plain-text-color;
+
+// border color around the "+" icon
+// @topnav-addnew-border-color: #1E90FF;
+
+// color of the "+" icon
+// @topnav-addnew-plus-color: #FFFF00;
+
+// background color of the "+" icon
+// @topnav-addnew-bg-color: #f00;
+
+// hover border color around the "+" icon
+// @topnav-addnew-border-hover-color: #f7f7f7;
+
+// hover background color of the "+" icon
+// @topnav-addnew-plus-hover-color: @topnav-addnew-border-hover-color;
+
+// hover color of the "+" icon
+// @topnav-addnew-text-hover-color: darken(@topnav-addnew-plus-color, 10%);
+
+// leftnav background color
+// @leftnav-bg-color: #AFEEEE;
+
+// leftnav text color
+// @leftnav-default-text-color: #663399;
+
+// leftnav icon color
+// @leftnav-default-icon-color: #EE82EE;
+
+// leftnav "active" text color 
+// @leftnav-active-text-color: #FF6347;
+
+// leftnav "active" icon color 
+// @leftnav-active-icon-color: #800080;
+
+// leftnav subnav text color
+// @leftnav-subnav-default-text-color: @leftnav-default-text-color;
+
+// leftnav "active" subnav text color
+// @leftnav-subnav-active-text-color: @leftnav-active-text-color;
+
+// border color of input fields when focused
+// @input-border-color: @input-bg-color;
+
+// background color of input fields when focused
+// @input-bg-color: #eceded;
+
+// border color of input fields when focused
+// @input-border-color: @input-bg-color;
+
+// border color of input fields when focused
+// @input-border-color: @input-bg-color;
+
+// text color of input fields  when focused
+// @input-text-color: @plain-text-color;
+
+// default background color of input fields
+// @input-bg-blurred-color: @input-bg-color;
+
+// default border color of input fields
+// @input-border-blurred-color: @disabled-bg-color;
+
+// default text color of input fields
+// @input-text-blurred-color: #999;
+
+// default link color
+// @link-color: @main-color;
+
+// background color of a "control header" -- example can be found at the top of the content area in the Admins page of API details
+// @control-header-bg-color: lighten(@content-divider-color,35%);
+
+// border color of a "control header" -- example can be found at the top of the content area in the Admins page of API details
+// @control-header-border-color: @control-header-bg-color;
+
+// bottom border color of a "control header" -- example can be found at the top of the content area in the Admins page of API details
+// @control-header-bottom-border-color: @control-header-bg-color;
+
+// background color of such inputs in a control header -- example can be found at the top of the content area of an API board
+// @control-header-input-bg-color: @canvas-color;
+
+// border color of such inputs in a control header -- example can be found at the top of the content area of an API board
+// @control-header-input-border-color: @canvas-color;
+
+// text color of such inputs in a control header -- example can be found at the top of the content area of an API board
+// @control-header-input-border-color: @input-text-color;
+
+// background color of table column headers
+// @table-head-bg-color: @plain-text-color;
+
+// text color of table column headers
+// @table-head-text-color: @inverse-color;
+
+// the divider between the notification # box in the top nav and the navigation links to the right
+// @topnav-notification-count-divider-color: @topnav-notification-count-bg-color;
+
+ // the border around the notification # box
+// @topnav-notification-count-border-color: @topnav-notification-count-bg-color;
+
+// text color of the notification # box
+// @topnav-notification-count-text-color: @plain-text-color;
+
+// border around a tooltip bubble
+// @tooltip-border-color: @main-color;
+
+// background color of a tooltip bubble
+// @tooltip-background-color: @main-color;
+
+// text color of a tooltip bubble
+// @tooltip-text-color: @inverse-color;
+
+// background color of a collapsible-panel header
+// @collapsible-panel-header-color: lighten(@plain-text-color, 70%);
+
+// border around a detailed progress chart step and line between steps
+// @progress-chart-detailed-border-color: #ddd;
+
+// background color of a detailed progress chart step
+// @progress-chart-detailed-border-color: #fff;
+
+// background of a detailed progress chart step that is complete
+// @progress-chart-detailed-complete-bg-color: #4caf50;
+
+// background of a detailed progress chart step that is incomplete
+// @progress-chart-detailed-incomplete-bg-color: #f2f2f2;
+
+// text color of a detailed progress chart step that is complete
+// @progress-chart-detailed-complete-text-color: #fff;
+
+// text color of a detailed progress chart step that is incomplete
+// @progress-chart-detailed-incomplete-text-color: #797979;
+
+// bottom border color of a detailed progress chart step that is complete
+// @progress-chart-detailed-complete-header-border-color: #4caf50;
+
+// bottom border color of a detailed progress chart step that is incomplete
+// @progress-chart-detailed-incomplete-header-border-color: #ddd;
+
+// line between steps in a slim progress chart
+// @progress-chart-slim-border-color: #ddd;
+
+// text color of a complete step in a slim progress chart
+// @progress-chart-slim-complete-text-color: #4caf50;
+
+// text color of an incomplete step in a slim progress chart
+// @progress-chart-slim-incomplete-text-color: #797979;
+
+// text color of the current step in a slim progress chart
+// @progress-chart-slim-current-text-color: @main-color;
+
+// attributes of markdown previews/posts
+// @markdown-preview-headings-font-weight: 500;
+// @markdown-preview-headings-line-height: 1.1;
+// @markdown-preview-headings-font-family: inherit;
+// @markdown-preview-headings-color: inherit;
+// @markdown-preview-line-height-computed: 1;
+// @markdown-preview-line-height-base: 1;
+// @markdown-preview-font-size-h1: 36px;
+// @markdown-preview-font-size-h2: 30px;
+// @markdown-preview-font-size-h3: 24px;
+// @markdown-preview-font-size-h4: 18px;
+// @markdown-preview-font-size-h5: 14px;
+// @markdown-preview-font-size-h6: 12px;
+// @markdown-preview-blockquote-font-size: 11px;
+// @markdown-preview-blockquote-border-color: #ccc;
+
+// buttons
+// @primary-button-text-color: @canvas-color; // the text color of a primary (submit, OK, etc) button
+// @primary-button-gradient-lightest: #ffaa44; // in the default (unclicked) position, the color at the top of the button's gradient
+// @primary-button-gradient-base: #ff9009; // in the default (unclicked) position, the color at the bottom of the button's gradient; also the color of the button when the browser does not support gradient. It's important that this color is a sharp contrast to the text color
+// @primary-button-text-shadow-color: darken(#c98b20,5%); //The top shadow color of the inlayed text of an unclicked button
+
+// @secondary-button-text-color: @canvas-color; // the text color of a secondary (cancel, etc) button
+// @secondary-button-gradient-lightest: #808080; // in the default (unclicked) position, the color at the top of the button's gradient
+// @secondary-button-gradient-base: #585858; // in the default (unclicked) position, the color at the bottom of the button's gradient; also the color of the button when the browser does not support gradient. It's important that this color is a sharp contrast to the text color
+// @secondary-button-text-shadow-color: darken(#7e7e7e,15%); //The top shadow color of the inlayed text of an unclicked button
+
+// chart filters container
+// @filters-bg-color: #f8f8f8;
+// @filters-border-color: #e5e5e5;
+
+//Advanced specific selectors
+
+//#Signup .soa-ui-cm-visibility-resendActivationEmail {
+//	display: none;
+//}
+//#Signup .soa-ui-cm-visibility-startover {
+//	display: none;
+//}
+//#Signup .wizardTab.tab3, #Signup .wizardTabTitle.tab3  {
+//	display: none;
+//}
+
+<% if (props.headerType === 'default-dark'){ %>
+// fill background of header with gradient, top to bottom
+// bottom: <%= props.headerGradientBottom %>
+// middle: <%= props.headerGradientMiddle %>
+// top   : <%= props.headerGradientTop %>
+div#container_Header {
+    position: relative;
+    width: 100%;
+    background: @main-color; /* Old browsers */
+    background: -moz-linear-gradient(top,  <%= props.headerGradientTop %> 0%, <%= props.headerGradientMiddle %> 60%, <%= props.headerGradientBottom %> 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,<%= props.headerGradientTop %>), color-stop(60%,<%= props.headerGradientMiddle %>), color-stop(100%,<%= props.headerGradientBottom %>)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  <%= props.headerGradientTop %> 0%,<%= props.headerGradientMiddle %> 60%,<%= props.headerGradientBottom %> 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  <%= props.headerGradientTop %> 0%,<%= props.headerGradientMiddle %> 60%,<%= props.headerGradientBottom %> 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  <%= props.headerGradientTop %> 0%,<%= props.headerGradientMiddle %> 60%,<%= props.headerGradientBottom %> 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  <%= props.headerGradientTop %> 0%,<%= props.headerGradientMiddle %> 60%,<%= props.headerGradientBottom %> 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='<%= props.headerGradientTop %>', endColorstr='<%= props.headerGradientBottom %>',GradientType=0 ); /* IE6-9 */
+}
+<% }%>

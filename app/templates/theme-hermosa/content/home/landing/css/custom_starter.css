@@ -1,0 +1,17 @@
+.cm_hero {
+  width: 800px;
+}
+
+.cm_hero .button {
+  margin-top: 0px;
+  margin-right: 100px;
+}
+
+.button a:hover {
+  background-color: <%= props.mainColor %>;
+  // #41b0dc
+}
+
+.button a {
+  background-color: <%= props.mainColor %>;
+}

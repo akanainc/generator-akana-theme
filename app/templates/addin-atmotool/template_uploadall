@@ -1,0 +1,49 @@
+#!/bin/bash
+#
+# Upload contents, resources, and custom.less using atmotool
+#
+# USAGE
+# ./uploadall [-c config_file] [-t theme] [-p prefix]
+#
+# config_file defaults to 'local.conf'
+# theme defaults to '<%= props.theme %>'
+
+## This is your prefix ######
+PREFIX=<%= props.lcCompanyName %>
+
+##############################
+## Defaults
+## Theme options: default, hermosa, simpledev
+THEME=<%= props.theme %>
+CONF="local.conf"
+
+## Check flags
+while getopts 'c:t:' opt; do
+  case ${opt} in
+   c)
+     CONF=${OPTARG}
+     ;;
+   t)
+     THEME=${OPTARG}
+     ;;
+   p)
+     PREFIX=${OPTARG}
+     ;;
+  esac
+done
+    
+## This validates existence of config
+if [[ ! -e ${CONF} ]]
+  then
+    echo "Can't find ${CONF}"
+    exit 1
+fi
+CONFIG="--config ${CONF}"
+
+atmotool zip --prefix ${PREFIX} content/home/landing 
+atmotool zip --prefix ${PREFIX} resources/theme/${THEME}
+atmotool upload file --path /content/home/landing ${PREFIX}_content-home-landing.zip ${CONFIG}
+atmotool upload file --path /resources/theme/${THEME} ${PREFIX}_resources-theme-${THEME}.zip ${CONFIG}
+#atmotool upload less custom.less ${CONFIG}
+atmotool upload file --path /resources/theme/${THEME}/less custom.less
+atmotool rebuild ${THEME}

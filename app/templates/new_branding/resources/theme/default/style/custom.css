@@ -1,0 +1,439 @@
+#Main, #container_Header, #container_Footer {
+    width: auto;
+}
+
+.Content-Widest {
+    width: auto;
+}
+
+.soa-ui-cm-container-top {
+   	width: auto;
+}
+
+.Left {
+   	margin-right: 0;
+	width: 200px;
+}
+
+#container_Left {
+    display: table-cell;
+	width: 200px;
+}
+
+#container_Content {    
+	display: table-cell;
+	vertical-align: top;
+	width: 100%;
+}
+
+#Main > div {
+    float: none;
+}
+
+.selectbox.truncate {
+    width: auto !important;
+}
+
+.searchoption .soa-ui-cm-input-container {
+	width: auto;
+}
+
+.searchoption .soa-ui-cm-input-container #collection_options_search, .searchoption .soa-ui-cm-input-container #tagtext {
+    	width: 85%;
+}
+
+
+div.cwrap div.cwrap_left {
+	float: none;
+    display: table-cell;
+}
+
+div.cwrap div.cwrap_right {
+    display: table-cell;
+    width: 100%;
+    vertical-align: top;
+    float: none;
+}
+
+.item_image {
+    display: table-cell;;
+    float: none;
+}
+
+.item_content {
+    display: table-cell;;
+    float: none;
+    width: 100%;
+    vertical-align: top;
+}
+
+
+/*left nav update*/
+
+div.sidebar_menu .level_0 .level_0 {
+    background: none;
+    font-size: 14px;
+    font-weight: normal;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 0 0 10px;
+}
+
+div.sidebar_menu .level_0 > ul {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+div.sidebar_menu .level_0 > a > ul > li.activemenu > a, div.sidebar_menu .level_0 .unordered .resourceMenuTitle > a {
+    font-weight: normal;
+}
+div.sidebar_menu .level_0 > a > ul > li > a, div.sidebar_menu .level_0 .unordered .resourceMenuTitle > a {
+    font-size: 12px;
+}
+
+
+/*remove LGM from licenses page*/
+
+.legalButtons {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color #cfd6d4 #cfd6d4;
+    border-image: none;
+    border-style: none solid;
+    border-width: medium 1px 1px;
+    padding: 20px 20px 10px;
+    float: none;
+}
+
+.legalListLeftAdmin {
+    display: none;
+}
+
+.legalListRightAdmin {
+    position: inherit;
+    top: 0px;
+}
+
+.legalListRight {
+    float: none;
+    width: auto;
+}
+
+/*Font change to Roboto and sizes*/
+
+body {
+    color: #3d4242 !important;
+    font: 14px/18px "Roboto",sans-serif !important;
+}
+
+td, body, select, textarea, input {
+    font-size: 14px !important;
+}
+
+h1 {
+    font-size: 20px !important;
+    font-weight: normal !important;
+}
+
+h3 {
+    font-size: 16px !important;
+    font-weight: normal !important;
+}
+
+h4 {
+    font-size: 14px !important;
+}
+
+div.cwrap div.cwrap_right h2, div.cwrap_right h3 {
+    font-size: 14px !important;
+}
+
+.soa-ui-cm-table {
+    font: 14px/18px "Roboto",sans-serif !important;
+}
+
+div.rtitle_wrap div.rtitle_right {
+    font-size: 14px !important;
+}
+
+div.cwrap div.cwrap_left ul.meta li {
+    font-size: 12px !important;
+}
+
+div.rsc_imglist h3 {
+    font-size: 12px !important;
+}
+
+.item_content {
+    font-size: 14px !important;
+}
+
+.ResourceTitle > h1 {
+    font-size: 20px !important;
+    line-height: 30px !important;
+}
+
+.item_content > h3 {
+    font-size: 16px !important;
+    font-weight: normal !important;
+}
+
+.collection_item_title a:link, .collection_item_title a:visited, .collection_item_title a:active, .collection_item_title a:hover {
+    font-size: 16px !important;
+    font-weight: normal !important;
+}
+
+.collection_item_description {
+    font-size: 14px !important;
+}
+
+.collection_item_link a:link, .collection_item_link a:visited, .collection_item_link a:active, .collection_item_link a:hover {
+    font-size: 14px !important;
+}
+
+.search_ext_name {
+    font-weight: normal !important;
+}
+
+.collection_item_extensions {
+    font-size: 12px !important;
+}
+
+.soa-ui-cm-section-header {
+    font: normal 14px/20px "Roboto", sans-serif;
+}
+
+.soa-ui-cm-button-close, .ui-button-close {
+    border: 1px solid transparent;
+}
+
+.soa-ui-cm-topnav-submenu-header {
+    font-size: 16px !important;
+    font-weight: normal;
+}
+
+.soa-ui-cm-topsearch .soa-ui-cm-topnav-submenu-popular-searches-link {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.soa-ui-cm-topsearch .soa-ui-cm-topnav-submenu-popular-searches-section .soa-ui-cm-topnav-submenu-items .soa-ui-cm-topnav-submenu-item > a {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.soa-ui-cm-topnav-submenu-item .soa-ui-cm-icon {
+    font-weight: normal;
+}
+
+div.wizard_two_column_left {
+    width: 45%;
+}
+
+div.wizard_two_column div.wizard_two_column_left div.formsep .input_visibility label.apiVisibility_Registered_Users_container, div.wizard_two_column div.wizard_two_column_left div.formsep .input_visibility label.appVisibility_Registered_Users_container, div.wizard_two_column div.wizard_two_column_left div.formsep .input_visibility label.groupVisibility_Registered_Users_container {
+    width: 140px;
+}
+
+div.wizard_two_column div.wizard_two_column_left div.formsep label {
+    font-weight: normal;
+    width: 140px;
+}
+
+div.wizard_two_column div.formsep div.inputwrap {
+    margin-left: 140px;
+}
+
+form.f_styled input[type="text"], form.f_styled input[type="textbox"], form.f_styled input[type="password"], form.f_styled textarea, .executeActionForm textarea {
+    font-weight: normal;
+}
+
+div.wizard_two_column div.wizard_two_column_right div.desc {
+    width: 300px;
+}
+
+/**** Card layout style ****/
+
+#searchResultsWrapper > .collection_item_container:first-child {
+    border: medium none;
+    margin: 0;
+    width: 100%;
+}
+
+#catalogWrapper > .collection_item_container:first-child {
+    border: medium none;
+    margin: 0;
+    width: 100%;
+}
+
+.collection_item_container {
+background: #fff;
+    border: 1px solid #d3d3d3;
+    float: left;
+    margin: 5px;
+    padding: 5px;
+    width: 47%;
+}
+
+.collection_item_link {
+    padding-left: 30px;
+}
+
+.collection_item_link a:link, .collection_item_link a:visited, .collection_item_link a:active, .collection_item_link a:hover {
+    padding: 0;
+    font-size: 10px;
+}
+
+.collection_item_description {
+    padding-left: 30px;
+    height: 40px;
+}
+
+.collection_item_extensions {
+    margin-left: 30px;
+}
+
+.search_result_divider {
+    border-bottom: none;
+}
+
+/**** END Card layout style ****/
+
+
+/*Bigger title bar*/
+
+div.rtitle_wrap {
+    height: 40px;
+}
+
+div.rtitle_wrap div.rtitle_right {
+    padding: 12px 10px 0 0;
+}
+
+div.rtitle_wrap div.rtitle_right > span {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.ResourceTitle > .soa-ui-cm-content-header > h1, .ApiDocsResourceTitle > .soa-ui-cm-content-header > h1 {
+    font-size: 20px;
+    font-weight: normal;
+    height: 30px;
+    line-height: 30px;
+    top: 6px;
+}
+
+.ConfigResources > h1, .SecurityDomainsList > h1, .ConfigCustomStyles > h1, .ConfigApis > h1, .ConfigApps > h1, .ConfigGroups > h1 {
+    background-image: url("images/sprites_cm_open_icons_18_ffffff.png")!important;
+    background-position: 4px -573px;
+    line-height: 30px;
+    padding: 7px 7px 7px 30px;
+}
+
+
+h1.headerPanel {
+    font-size: 20px;
+    font-weight: normal;
+    height: 40px;
+    line-height: 40px;
+}
+
+.soa-ui-cm-content-header > h1 {
+    line-height: 30px;
+    min-height: 30px;
+}
+
+div.LeftPanel h2.title, fieldset.leftPanel h2.title {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+#collection_options form label {
+    font-size: 14px;
+}
+
+.selectbox-wrapper li, span.selectbox {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+span.selectbox {
+    height: 24px;
+}
+
+.searchoption .soa-ui-cm-input-container {
+    padding: 6px 2px 5px 5px;
+}
+
+/*Bigger buttons*/
+
+.soa-ui-cm-button, .ui-button {
+    font: normal 14px/30px "Roboto",sans-serif;
+}
+
+.apilinks a, .apilink_adddash, .apilink_removedash {
+    line-height: 30px;
+}
+
+button, a.button, input.button {
+    font: normal 14px/30px "Roboto",sans-serif;
+}
+
+#APIDetails div.cwrap > div.cwrap_left > div.description > div.editrsc > button {
+    width: 130px;
+}
+
+/*Remove bold*/
+
+#BoardItemsFilter ul.filterBoard > li > h4, #BoardItemsFilter ul.filterBoard > li > label {
+    font-weight: normal;
+}
+
+/*Bigger search*/
+
+.soa-ui-cm-topsearch-fieldset > p .soa-ui-cm-input {
+    font: normal 12px/14px helvetica,arial,sans-serif;
+    width: 200px;
+}
+
+/*Replace icons at top with text*/
+
+.soa-ui-cm-openitem-tools .soa-ui-cm-icon-imgtxt {
+    background-image: none !important;
+    display: inline;
+    font-size: 12px;
+}
+
+.soa-ui-cm-openitem-tools .soa-ui-cm-icon-imgtxt:hover{
+    background-image: none;
+}
+
+.soa-ui-cm-topnav .soa-ui-cm-user-tools-menu > li {
+    font-size: 12px;
+ }
+
+.soa-ui-cm-openitem-tools > ul.soa-ui-cm-openitem-tools-dashboard-notification > li > a {
+    font-size: 12px;
+}
+.soa-ui-cm-openitem-tools > ul > li > a {
+    font-weight: normal;
+}
+
+/* Hack to remove 'Logged in as'*/
+.soa-ui-cm-topnav .soa-ui-cm-user-tools-menu > li.soa-ui-cm-user-tools-menu-username {
+    font-size: 0px;
+    font-weight: normal;
+}
+
+.soa-ui-cm-topnav .soa-ui-cm-user-tools-menu > li.soa-ui-cm-user-tools-menu-username > span {
+    font-size: 12px;
+}
+
+/*Solid header*/
+
+.soa-ui-cm-container-top {
+    background: #2683b4 none repeat scroll 0 0;
+    height: 65px;
+    margin: 0 0 10px auto;
+ }

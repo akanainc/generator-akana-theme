@@ -1,14 +1,17 @@
 {
   "name": "generator-akana-theme",
-  "version": "0.4.1",
-  "description": " Theme customization for Akana Community Manager developer portal",
+  "version": "0.5.0",
+  "description": " Theme customization for Akana API Platform developer portal",
   "files": [
     "app"
   ],
   "keywords": [
     "yeoman-generator",
     "akana",
-    "communitymanager"
+    "communitymanager",
+    "apiplatform",
+    "apiportal",
+    "portal"
   ],
   "author": {
     "name": "G. Hussain Chinoy",

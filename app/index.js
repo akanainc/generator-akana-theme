@@ -7,17 +7,25 @@ module.exports = generators.Base.extend({
   constructor: function () {
     generators.Base.apply(this, arguments);
 
+    this.option('theme', {
+      type: String,
+      required: false,
+      defaults: "hermosa",
+      desc: "When specified, switches to an alternate theme than the default. Default: hermosa"
+    });
+
     this.option('atmotool', {
       type: Boolean,
       required: false,
       defaults: false,
-      desc: 'When specified, will create a local.conf and uploadall script for use with atmotool'
+      desc: 'When specified, will create a local.conf and uploadall script for use with atmotool cli'
     });
 
   },
 
   initializing: function () {
     this.generatorsPrefix = this.options.flat ? '' : 'generators/';
+    this.themeDir = "theme-" + this.options.theme;
   },
 
   prompting: {
@@ -25,7 +33,7 @@ module.exports = generators.Base.extend({
     // basic questions
     askFor: function () {
       var done = this.async();
-      this.log(yosay('Hello! Let\'s create an Akana Community Manager Theme customization.'));
+      this.log(yosay('Hello! Let\'s create an Akana API Portal Theme customization.'));
 
       var prompts = [
       /*
@@ -78,14 +86,14 @@ module.exports = generators.Base.extend({
           name: 'headerType',
           choices: ['default-transparent', 'default-dark', 'default-wide'],
           message: "Header type",
-          default: 'transparent'
+          default: 'default-transparent'
         },
         { type: 'input',
           name: 'containerHeaderColor',
           message: 'solid header color',
           default: '#2683b4',
           when: function(answers) {
-            return answers.headerType === 'default-wide'
+            return answers.headerType === 'default-wide';
           }
         },
         {
@@ -94,7 +102,7 @@ module.exports = generators.Base.extend({
           message: 'Hover on Apps Menu Title',
           default: 'My Apps',
           when: function(answers) {
-            return answers.headerType === 'default-wide'
+            return answers.headerType === 'default-wide';
           }
         },
         {
@@ -103,7 +111,7 @@ module.exports = generators.Base.extend({
           message: 'Hover on Groups Menu Title',
           default: 'My Groups',
           when: function(answers) {
-            return answers.headerType === 'default-wide'
+            return answers.headerType === 'default-wide';
           }
         },
         {
@@ -112,7 +120,7 @@ module.exports = generators.Base.extend({
           message: 'Hover on APIs Menu Title',
           default: 'My APIs',
           when: function(answers) {
-            return answers.headerType === 'default-wide'
+            return answers.headerType === 'default-wide';
           }
         },
         {
@@ -121,7 +129,7 @@ module.exports = generators.Base.extend({
           message: 'Hover on Admin Menu Title',
           default: 'Admin',
           when: function(answers) {
-            return answers.headerType === 'default-wide'
+            return answers.headerType === 'default-wide';
           }
         },
         {
@@ -178,11 +186,13 @@ module.exports = generators.Base.extend({
         this.props = props;
         this.config.set(props);
         this.companyName = props.companyName;
+        this.props.theme = this.options.theme;
         done();
       }.bind(this));
 
     },
 
+    /* atmotool */
     askAboutAtmotool: function () {
 
       // if there's --atmotool, continue
@@ -201,19 +211,19 @@ module.exports = generators.Base.extend({
         {
           type: 'input',
           name: 'cmUrl',
-          message: 'base url for CM',
+          message: 'base url for API Portal',
           default: 'http://ent.akana-dev.net:9900'
         },
         {
           type: 'input',
           name: 'cmEmail',
-          message: 'admin email for CM',
+          message: 'admin email for API Portal',
           default: 'administrator@cm.akana.demo'
         },
         {
           type: 'password',
           name: 'cmPassword',
-          message: 'admin password for CM',
+          message: 'admin password for API Portal',
           default: 'password'
         }
       ];
@@ -233,28 +243,36 @@ module.exports = generators.Base.extend({
         done();
       }.bind(this));
 
-    },
+    }, /* atmotool end */
 
   },
 
   writing: {
     projectfiles: function () {
+      /*
+      may want to check if dir exists and bail, otherwise
+      !fs.existsSync(this.themeDir)
+      */
+
       this.companyDir = 'CM_' + this.companyName.replace(/\s/g, '') + '/';
 
       this.template('README.md', this.companyDir + 'README.md');
-      this.template('custom.less', this.companyDir +  'custom.less');
-      this.directory('resources',  this.companyDir + 'resources');
-      this.directory('content', this.companyDir + 'content');
+      this.template(this.themeDir + '/' + 'custom.less', this.companyDir +  'custom.less');
+      this.directory(this.themeDir + '/' + 'resources',  this.companyDir + 'resources');
+      this.directory(this.themeDir + '/' + 'content', this.companyDir + 'content');
+
+      // atmotool
       if (this.options.atmotool) {
-        this.template('template_local.conf', this.companyDir + 'local.conf');
-        this.template('template_gitignore', this.companyDir + '.gitignore');
+        var addInDir = "addin-atmotool";
+        this.template(addInDir + '/' + 'template_local.conf', this.companyDir + 'local.conf');
+        this.template(addInDir + '/' + 'template_gitignore', this.companyDir + '.gitignore');
         // https://github.com/yeoman/yeoman/issues/1235
         // https://github.com/yeoman/generator/pull/489
         // modern way of copying, as opposed to the above convenience
         // - use either: fs.copy(templatePath, destinationPath) 
         // - or: fs.copyTpl(templatePath, destinationPath, modelObject)
         this.fs.copyTpl(
-          this.templatePath('template_uploadall'),
+          this.templatePath(addInDir + '/' + 'template_uploadall'),
           this.destinationPath(this.companyDir + 'uploadall'),
           this,
           {
@@ -262,6 +280,7 @@ module.exports = generators.Base.extend({
           }
         );
       }
+
     },
 
     config: function () {
@@ -271,7 +290,7 @@ module.exports = generators.Base.extend({
 
   end: function () {
     if (this.props.logoImage !== "atmologo.png") {
-      this.log('Please remember to place ' + this.props.logoImage + ' in the ' + this.companyDir + 'resources/theme/default/style/images directory.');
+      this.log('Please remember to place ' + this.props.logoImage + ' in the ' + this.companyDir + 'resources/theme/' + this.options.theme + '/style/images directory.');
     }
     if (this.props.landingHeroImage !== "starter_industries.jpg") {
       this.log('Please remember to place ' + this.props.landingHeroImage + ' in the ' + this.companyDir + 'content/home/landing/images directory.');
