@@ -1,6 +1,6 @@
 {
   "name": "generator-akana-theme",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": " Theme customization for Akana API Platform developer portal",
   "files": [
     "app"
